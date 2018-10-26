@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				background-color: #fafafa;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+				padding-bottom: 51px;
+			}
+			
+			.by-card {
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.by-card .mui-card-footer:before {
+				height: 0;
+			}
+			
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #f5ba4c;
+			}
+			
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 22%;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+				
+			}
+			.link-area a{
+				
+				color:#f5ba4c;
+			} 
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+			.mui-input-row label{
+				text-align: center;
+			}
+			.by-register-form div.mui-input-row{
+				height:50px;
+				line-height: 50px;
+			}
+			.by-register-form .mui-input{
+				height:50px;
+				font-weight: bold;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background:#f5ba4c">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
+			<h1 class="mui-title" style="color:#fff;font-weight: bold;">
+				登录
+			</h1>
+			<a class=" mui-icon mui-icon-more mui-pull-right" style="color:#fff"></a>
+		</header>
+		<div class="mui-content" style="background-color:#fafafa">
+			<div class="">
+			<div id="input_example" class="mui-input-group by-register-form" style="margin-top: 30px;">
+			    <div class="mui-input-row">
+			        <label><span class="mui-icon mui-icon-phone"></span></label>
+			        <input id="username" type="text" class="mui-input-clear mui-input" placeholder="请输入用户名" id="username">
+			    </div>
+			    <div class="mui-input-row">
+			        <label><span class="mui-icon mui-icon-locked"></span></label>
+			        <input id="password" type="password" class="mui-input-clear mui-input-password mui-input" placeholder="请输入密码" id="password">
+			    </div> 
+			 </div>
+			
+		</div>
+			
+			<div class="mui-content-padded">
+				<button id='login' class="mui-btn mui-btn-block " style="background-color:#f5ba4c ;border:none;color:#fff;border-radius: 25px;">登录</button>
+				<div class="link-area"><a id='reg' href="register.html">注册账号</a> <span class="spliter" style="color:#f5ba4c">|</span> <a id='forgetPassword' href="zhpwd.html">忘记密码</a>
+				</div>
+			</div>
+			
+
+		</div>
+		<script src="js/util.js"></script>
+		<script type="text/javascript">
+			(function() {
+				mui.init({
+					swipeBack: true //启用右滑关闭功能
+				});
+
+			})();
+				mui(document.body).on('tap', '.mui-btn', function(e) {
+			mui("#input_example input").each(function() {
+				//若当前input为空，则alert提醒 
+				if(!this.value || this.value.trim() == "") {
+				    var label = this.previousElementSibling;
+				    mui.alert(label.innerText + "不允许为空");
+				    check = false;
+				    return false;
+				}else{
+					check =true;
+				}
+			}); //校验通过，继续执行业务逻辑 
+				if(check){ 
+					mui('.mui-btn').button('loading');
+				    var myname =  document.getElementById("username").value;
+					var mypasswd = 	document.getElementById("password").value;
+						mui.ajax('http://mui.zefei/api/Public/Tiangu/?service=User.checkLogin',{
+							data:{
+								username:myname,
+								password:mypasswd
+							},
+							dataType:'jsonp',//服务器返回json格式数据
+							type:'get',//HTTP请求类型
+							success:function(data){
+								//获得服务器响应
+								mui('.mui-btn').button('reset');
+								var res = JSON.parse(data);
+								if(res.data.code == 200){
+									 mui.toast(res.data.info.username+',登录成功！',{ duration:'long', type:'div' }); 
+								}else{
+									mui.toast(res.data.msg,{ duration:'long', type:'div' }); 
+								}
+							}
+						});
+				}
+			});
+			mui('body').on('tap','a',function(){
+		          window.top.location.href=this.href;
+		   });
+		</script>
+	</body>
+
+</html>

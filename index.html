@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+				height:100%;
+				background-color: #fff;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+				padding-bottom: 51px;
+			}
+			.by-card{
+				width:100%;
+				padding:0;
+				margin:0;
+			}
+			.by-card .mui-card-footer:before{
+				height:0;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active{
+				color: #f5ba4c;
+				}
+			.by-search{
+				position: absolute;
+				right:50%;
+				transform: translateX(50%);
+				-webkit-transform: translateX(50%);
+				
+			}
+			.by-by-index-btna{
+				width:160px;
+				font-weight:bold;
+				height:40px;line-height:40px;
+				border-radius: 15px;
+				background-color:#f5ba4c;
+				color:#fff;
+				text-align: center;
+				font-size: 16px;
+				margin-bottom:5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background:#f5ba4c">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
+			<a class=" mui-icon mui-icon-close mui-pull-left mui-hidden" style="color:#fff"></a>
+			
+				<div class="mui-input-row mui-search by-search"  style="">
+					<input type="search" class="mui-input-clear"placeholder="">
+				</div>
+			
+			<a class=" mui-icon mui-icon-more mui-pull-right" style="color:#fff"></a>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider" style="height:150px">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="javascript:void(0)">
+							<img src="images/1.png" />
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="javascript:void(0)">
+							<img src="images/1.png">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="javascript:void(0)">
+							<img src="images/1.png">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href=javascript:void(0)">
+							<img src="images/1.png">
+						</a>
+					</div>
+					<!-- 第四张 -->
+					<div class="mui-slider-item">
+						<a href="javascript:void(0)">
+							<img src="images/1.png">
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="javascript:void(0)">
+							<img src="images/1.png">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<div class="mui-card by-card" style="box-shadow: none;">
+				<div class=" mui-card-media" style="height:65vw;background-image:url(images/yp.png)"></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner" style="padding:0 5px;">
+						<p><h4  style="text-align: center;color:#4b4b4b;">人参萃取精华丸</h4></p>
+						<p style="color: #9b9b9b;padding:0 10px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用，本品3个月，活化肾脏.精满.气足.神旺...</p>
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<span style="color:#727272;font-weight: bold;">零售价：<text style="color:#ff0101">650  元 / 盒</text></span>
+					<a class="mui-card-link" href="spxqy.html"><span class="by-by-index-btna" >点击了解详情</span></a>
+				</div>
+			</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="index.html">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-dictionary"></span>
+				<span class="mui-tab-label">帮助</span>
+			</a>
+			<a class="mui-tab-item" href="gwc.html">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="grzx.html">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">个人中心</span>
+			</a>
+		</nav>
+		<script src="js/util.js"></script>
+		<script type="text/javascript">
+			(function() {
+				mui.init({
+					swipeBack: true //启用右滑关闭功能
+				});
+				var slider = mui("#slider");
+				slider.slider({
+					interval: 2000
+				});
+				
+			})();
+			mui('body').on('tap','a',function(){
+          		window.top.location.href=this.href;
+   			});
+		</script>
+	</body>
+
+</html>

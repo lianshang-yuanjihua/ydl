@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+				height: 100%;
+				background-color: #fafafa;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+				padding-bottom: 51px;
+			}
+			
+			
+			
+			
+			
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #f5ba4c;
+			}
+			
+			.by-car-tab .mui-tab-item {
+				color: #6f6f6f;
+				font-weight: bold;
+			}
+			
+			.by-car-tab .mui-tab-item.mui-active {
+				color: red;
+			}
+			
+			
+			
+			.mui-navigate-right:after,
+			.mui-push-right:after {
+				font-size: 26px;
+			}
+			
+			.by-grezy-head {
+				width: 100vw;
+				height: 150px;
+				background-color: #f5ba4c;
+				text-align: center;
+				padding: 10px 0;
+				color: #fefcf9;
+			}
+			
+			.by-grzx-ye span:first-child {
+				display: inline-block;
+				margin-right: 20px;
+			}
+			
+			.by-grzx-ye span:last-child {
+				display: inline-block;
+				margin-left: 20px
+			}
+			
+			.by-grzx-ye span:last-child:before {
+				content: '';
+				height: 20px;
+				background-color: #ccc;
+				position: relative;
+				border: 1px solid #fff;
+				position: absolute;
+				left: 48%;
+			}
+			.by-bage{
+				position: absolute;
+				top:2px;
+				right:0px;
+			}
+			.mui-media-body{
+				font-weight: bold;
+				color:#6a6a6a;
+			}
+			.by-mr90{
+				margin-right:-90px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background:#f5ba4c;box-shadow: 0 0px 6px #f5ba4c;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
+			<h1 class="mui-title" style="color:#fff;font-weight: bold;">
+				个人中心
+			</h1>
+			<a class=" mui-icon mui-icon-more mui-pull-right" style="color:#fff"></a>
+		</header>
+		<div class="mui-content" style="background-color:#fafafa">
+			<div class="by-grezy-head">
+				<h4>总收入<h4>
+				<h2 style="margin:15px;">0.000</h2>
+				<div class="by-grzx-ye">
+					<span class="">余额 <strong>10112</strong></span>
+					<span>云仓金额 <strong>0.00</strong></span>
+			</div>
+		</div>
+		<div class="mui-content" style="background-color:#fafafa">
+			
+			
+			<div class="mui-card">
+				<div class="mui-card-header" style="font-weight:bold;color:#6e6e6e">我的订单</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<nav class="mui-bar-tab by-car-tab">
+							<a class="mui-tab-item" style="position:relative" href="javascript:void(0)">
+								
+								<span class="mui-badge mui-badge-red  by-bage">3</span>
+								<span class="mui-icon mui-icon-extra mui-icon-extra-dictionary "></span>
+								<span class="mui-tab-label">代付款</span>
+							</a>
+							<a class="mui-tab-item" style="position:relative" href="javascript:void(0)">
+								<span class="mui-badge mui-badge-red  by-bage">3</span>
+								<span class="mui-icon  mui-icon-extra mui-icon-extra-outline"></span>
+								<span class="mui-tab-label">待收货</span>
+							</a>
+							<a class="mui-tab-item" style="position:relative" href="javascript:void(0)">
+								<span class="mui-badge mui-badge-red  by-bage">3</span>
+								<span class="mui-icon mui-icon-extra mui-icon-extra-card"></span>
+								<span class="mui-tab-label">待发货</span>
+							</a>
+							<a class="mui-tab-item" style="position:relative" href="javascript:void(0)">
+								<span class="mui-badge mui-badge-red  by-bage">3</span>
+								<span class="mui-icon mui-icon-extra mui-icon-extra-express"></span>
+								<span class="mui-tab-label">已发货</span>
+							</a>
+							<a class="mui-tab-item" style="position:relative" href="javascript:void(0)">
+								<span class="mui-badge mui-badge-red  by-bage">3</span>
+								<span class="mui-icon mui-icon-checkmarkempty"></span>
+								<span class="mui-tab-label">已完成</span>
+							</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<ul class="mui-table-view mui-table-view-chevron" style="padding: 0 10px;">
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" href="wdfs.html">
+						
+						<div class="mui-media-body">
+							我的粉丝 <span style="float:right">21321 </span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class='mui-navigate-right' href="wdkc.html">
+						
+						<div class="mui-media-body">
+							我的库存
+							
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" href="javascript:void(0)">
+						
+						<div class="mui-media-body">
+							售后
+							
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class='mui-navigate-right' href="javascript:void(0);">
+						
+						<div class="mui-media-body">
+							关于
+							
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" href="grsz.html">
+						
+						<div class="mui-media-body">
+							设置
+							
+						</div>
+					</a>
+				</li>
+			</ul>
+			</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active"  href="index.html">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="javascript:void(0)">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-dictionary"></span>
+				<span class="mui-tab-label">帮助</span>
+			</a>
+			<a class="mui-tab-item" href="gwc.html">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="grzx.html">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">个人中心</span>
+			</a>
+		</nav>
+		<script src="js/util.js"></script>
+		<script type="text/javascript">
+			(function() {
+				mui.init({
+					swipeBack: true //启用右滑关闭功能
+				});
+				var slider = mui("#slider");
+				slider.slider({
+					interval: 2000
+				});
+
+			})();
+			mui('body').on('tap','a',function(){
+		          window.top.location.href=this.href;
+		   });
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				background-color: #fafafa;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+				padding-bottom: 51px;
+			}
+			
+			
+			.mui-content>.mui-table-view:first-child{
+				margin-top:0;
+			}
+			.by-card .mui-card-footer:before {
+				height: 0;
+			}
+			
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #f5ba4c;
+			}
+			
+			 .oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+	
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			.oa-contact-avatar img {
+				border-radius: 50%;
+				width:60px;
+				height:60px;
+			}
+			.oa-contact-content {
+				width: 100%;
+			}
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			.oa-contact-name, oa-contact-position {
+				float: left;
+			}
+			.by-wdfs-search{
+				margin:10px 10px 0;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background:#f5ba4c">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
+			<h1 class="mui-title" style="color:#fff;font-weight: bold;">
+				我的粉丝
+			</h1>
+			<a class=" mui-icon mui-icon-more mui-pull-right" style="color:#fff"></a>
+		</header>
+		<div class="mui-content">
+			
+			<div class="by-wdfs-search">
+				<div class="mui-input-row mui-search">
+					<input type="search" class="mui-input-clear" placeholder="查找粉丝">
+				</div>
+			</div>
+
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/logo.png" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">叶文洁</h4>
+									<span class="oa-contact-position mui-h6">董事长</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									yewenjie@sina.com
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/ma.png" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">叶文洁</h4>
+									<span class="oa-contact-position mui-h6">董事长</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									yewenjie@sina.com
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	
+			
+		<script src="js/util.js"></script>
+		<script type="text/javascript">
+			(function() {
+				mui.init({
+					swipeBack: true //启用右滑关闭功能
+				});
+				var slider = mui("#slider");
+				slider.slider({
+					interval: 2000
+				});
+
+			})();
+		</script>
+	</body>
+
+</html>

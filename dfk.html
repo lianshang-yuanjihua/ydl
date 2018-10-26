@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+				height: 100%;
+				background-color: #fafafa;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+				padding-bottom: 51px;
+			}
+			
+			.by-card {
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			.mui-content>.mui-table-view:first-child{
+				margin-top:0;
+			}
+			.by-card .mui-card-footer:before {
+				height: 0;
+			}
+			
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #f5ba4c;
+			}
+			.by-gwc-fl {
+				float: left;
+			}
+			
+			
+			.by-jz {
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				box-shadow: 0px -2px 2px #ccc;
+				border-top: 1px solid #ccc;
+				position: fixed;
+				bottom: 50px;
+			}
+			
+			.by-jz-btn {
+				display: inline-block;
+				width: 95px;
+				height: 40px;
+				background: #f5ba4c;
+				color: #fff;
+				border-radius: 20px;
+				text-align: center;
+				font-weight: bold;
+				line-height: 40px;
+				margin-left: 5px
+			}
+			
+			.by-gwc-ktxt {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+			}
+			
+			.by-gwc-ktxt a {
+				display: block;
+				width: 140px;
+				height: 45px;
+				background-color: #f5ba4c;
+				color: #fff;
+				font-size: 18px;
+				font-weight: bold;
+				line-height: 45px;
+				border-radius: 22.5px;
+				margin-top: 10vw;
+				margin-left: 10px;
+			}
+			
+			.by-gwcjs-jg {
+				color: #ff3434;
+				margin-top: 20px;
+				font-weight: bold;
+			}
+			
+			.by-dsh-b {
+				width: 100%
+			}
+			#by-dfk-dfk{
+				position:absolute;
+				top:23.5px;
+				right:20px;
+				color:#f8ba55;
+			}
+			.mui-navigate-right:after, .mui-push-right:after{
+				content:'';
+			}
+		
+			
+			.by-bottom-border div:first-child{
+				width: 100vw;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+			}
+			 .by-bottom-border div:nth-child(2) p{
+
+				height:30px;
+				line-height:30px;
+				text-align: right;
+				box-shadow: 1px -1px 1px #f8f8f8,1px 1px 1px #f8f8f8;
+			}
+			.by-bottom-border div:last-child{
+				height: 50px;
+				line-height:50px;
+			}
+			.by-bottom-border div:last-child a{
+				display: inline-block;
+				padding:2px 10px;
+				line-height: 30px;
+				border:1px solid #a7a7a7;
+				color:#a7a7a7;
+				border-radius: 3px;
+				margin-right:10px;
+				margin-top:10px;
+				float:right;
+				font-weight: bold;
+				
+			}
+			.by-bottom-border div:last-child a:active,.by-bottom-border div:last-child a:hover{
+				color:#fff;
+				background-color: #F5BA4C;
+				border:none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background:#f5ba4c">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
+			<h1 class="mui-title" style="color:#fff;font-weight: bold;">
+				收货地址
+			</h1>
+			<a class=" mui-icon mui-icon-gear mui-pull-right" style="color:#fff"></a>
+		</header>
+		<div class="mui-content" style="background-color:#fafafa">
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media by-shdz-underline">
+					
+					<div class="mui-navigate-right">
+						
+						
+						<div class="mui-media-body" style="color:#5b5b5b">
+							 <strong>人生萃取精华丸</strong> 
+							<p class='mui-ellipsis'><span>订单编号：</<stext>454545341345536</stext></p>
+								
+						</div>
+						<a href="javascript:void(0)" id="by-dfk-dfk">等待付款</a>
+					</div>
+					
+				</li>
+				
+			</ul>
+			<div class="mui-card">
+				<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
+					<img src="images/09.png" style="width: 50px;height:80px;" />
+				</div>
+				<div class="by-gwc-fl" style="width: 60%;">
+					<div class="mui-card by-card" style="box-shadow: none;">
+
+						<div class="mui-card-content">
+							<div class="mui-card-content-inner" style="padding:0 5px;">
+								<p>
+									<h4 style="text-align: center;">人参萃取精华丸</h4>
+								</p>
+								<p style="color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<h5 class="by-gwcjs-jg">￥650元/盒</h5>
+				<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
+					<p class="mui-text-right"><strong style="color:#ff3434;font-size:20px">x12</strong></p>
+					
+				</div>
+				
+			</div>
+			
+			
+		</div>
+		<div class="by-bottom-border mui-card">
+					<div class=" ">
+						<a href="">查看全部商品</a>
+					</div>
+					<div class="javascript:void(0)">
+						<p class="mui-text-right" style="color: #9b9b9b;padding:0 10px;margin:0; font-size: 14px;"><strong>合计：</strong><text style="color:#ff3636">￥145415</text></p>
+					</div>
+					<div class="">
+						<a href="javascript:void(0)">取消</a><a href="javascript:void(0)">付款</a>
+					</div>
+				</div>
+		<script src="js/util.js"></script>
+		<script type="text/javascript">
+			(function() {
+				mui.init({
+					swipeBack: true //启用右滑关闭功能
+				});
+				
+
+			})();
+		</script>
+	</body>
+
+</html>
