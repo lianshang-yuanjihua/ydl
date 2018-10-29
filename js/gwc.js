@@ -1,80 +1,111 @@
-//获取相对元素
-var byPrice = $('#by-price');
-var byBtnR = $('#by-btn-reduce');//
-var byBtnA = $('#by-btn-add');
-var byInputN = $('#by-input-num');
-var byHj = $('#by-hj');
-$(function(){
-     byHj.text(byPrice.text() * byInputN.val())
+(function () {
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    var slider = mui("#slider");
+    slider.slider({
+        interval: 2000
+    });
+
+})();
+$(function () {
+    $("#by-hj").text(priceAll());
+})
+$("body").on("change", ".mui-input-numbox", function () {
+
+    priceAll();
 })
 //按钮减且赋值到价格
-byBtnR.click(function () {
-    if (byInputN.val() <= 1) {
-
-        byBtnR.attr('disabled', 'disabled');
-    }
-})
-
-byInputN.change(function(){
-    byHj.text(byPrice.text() * byInputN.val());
+$("body").on("click", ".by-btn-reduce", function () {
+    // console.log($(this).next().val());
+    if ($(this).next('.by-input-num').val() <= 1) {
+        $(this).attr('disabled', 'true');
+        // $(this).parents('.mui-card').remove();
+    };
 })
 //全选按钮
-function checkAll(){
-    $('#by-checkAll').change(function(){
-        console.log($(this)[0].checked);
-        if(!$(this)[0].checked){
-            $('.by-check').each(function(index,val){
-                val.checked=false;
+function checkAll() {
+    $('#by-checkAll').change(function () {
+        //      console.log($(this)[0].checked);
+        if (!$(this)[0].checked) {
+            $('.by-check').each(function (index, val) {
+                val.checked = false;
             })
-        }else{
-            $('.by-check').each(function(index,val){
-                val.checked=true;
+        } else {
+            $('.by-check').each(function (index, val) {
+                val.checked = true;
             })
         }
+        priceAll();
     })
+}
+//计算价格总和
+function priceAll() {
+    total = 0;
+    for (var c = 0; c < $(".signprice").length; c++) {
+        if ($($('.by-check')[c]).is(':checked')) {
+            total += Number($($('.signprice')[c]).text()) * Number($($('.by-input-num')[c]).val())
+        }
+        $('#by-hj').text(total);
+
+    }
 }
 //单选按钮
-function check(){
-    $('body').on('change','.by-check',function(){
+function check() {
+    $('body').on('change', '.by-check', function () {
+        priceAll();
         var checkList = $('.by-check');
-        var a = checkList.filter(function(i,v){
-            
-            return v.checked==true;//仅返回value=1的多选框
+        var a = checkList.filter(function (i, v) {
+            return v.checked == true; //checked为真的多选框
         });
-        console.log($('.by-check').length);
-        console.log(a.length);
-        if(a.length == $('.by-check').length){
-            console.log('by');
-            $('#by-checkAll')[0].checked=true;
-        }else{
-            $('#by-checkAll')[0].checked=false;
-            console.log('sp');
-        }
+        if (a.length == $('.by-check').length) {
+            $('#by-checkAll')[0].checked = true;
+        } else {
+            $('#by-checkAll')[0].checked = false;
+        };
+
+
+
     })
-    
 }
-//合计按钮
-$('.by-jz-btn').click(function(){
-    var chexck  = $('#by-check-01')[0];
-    console.log(chexck.checked);
-    
-    if(chexck.checked &&  byInputN.val()!=0){
-        alert('成功支付...'+byHj.text());
-        // $.ajax({
-        //     type:'GET',
-        //     datatype:'json',
-        //     data:{
-        //         "by-zj":byHj.text(byPrice.text() * byInputN.val())
-        //     },
-        //     url:'',
-        //     success:function(data){
-        //         console.log(data.data)
-        //     }
-        // })
-    }else{
-        alert('请选择商品...')
-    }
-})
+
+//商品不存在时
+// function noGoods(){
+//     // console.log($(".signprice").length);
+//     if($(".signprice").length==0){
+//         $('.by-content').addClass("mui-hidden");
+//         $('.by-noGoods').removeClass("mui-hidden");
+//     }
+// }
 
 checkAll();
 check();
+
+//结账提交数据
+$('.by-jz-btn').click(function () {
+    var obj = [];
+    $('.by-card-data').each(function (i, v) {
+        obj.push(v.dataset.id);
+    });
+    var goodsId = new Set(obj);
+    var goodsNumber = [];
+    $('.by-input-num').each(function(i,v){
+        goodsNumber.push(v.value);
+    })
+    console.log(goodsNumber);
+
+    $.ajax({
+        type: "GET",
+        url: "",
+        data: {
+            'total': $("#by-hj").text(),//总价
+            'id': goodsId,//商品id
+            'goodsNumber':goodsNumber//商品个数
+        },
+        dataType: "json",
+        success: function (data) {
+
+        }
+    });
+
+})

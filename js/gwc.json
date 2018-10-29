@@ -1,0 +1,30 @@
+{
+    "code":1,
+    "goods":[
+        {
+            "id":0,
+            "price":650,
+            "src":"images/09.png"
+        },
+        {
+            "id":1,
+            "price":100,
+            "src":"images/09.png"
+        },
+        {
+            "id":2,
+            "price":10,
+            "src":"images/09.png"
+        },
+        {
+            "id":3,
+            "price":20,
+            "src":"images/09.png"
+        },
+        {
+            "id":4,
+            "price":10,
+            "src":"images/09.png"
+        }
+    ]
+}
