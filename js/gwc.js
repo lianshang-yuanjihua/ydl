@@ -36,11 +36,20 @@ function checkAll(){
 //单选按钮
 function check(){
     $('body').on('change','.by-check',function(){
-        $('.by-check').each(function(index,val){
-          console.log(JSON.stringify(val.checked));
-
-          
-        })
+        var checkList = $('.by-check');
+        var a = checkList.filter(function(i,v){
+            
+            return v.checked==true;//仅返回value=1的多选框
+        });
+        console.log($('.by-check').length);
+        console.log(a.length);
+        if(a.length == $('.by-check').length){
+            console.log('by');
+            $('#by-checkAll')[0].checked=true;
+        }else{
+            $('#by-checkAll')[0].checked=false;
+            console.log('sp');
+        }
     })
     
 }
