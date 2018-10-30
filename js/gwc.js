@@ -83,28 +83,48 @@ check();
 
 //结账提交数据
 $('.by-jz-btn').click(function () {
-    var obj = [];
+    //获取商品种类
+    var shopping = []; //所有商品数量
+    var obj = []; //每个商品的种类
+
+    //获取商品种类id
+    var goodsId = []; 
     $('.by-card-data').each(function (i, v) {
-        obj.push(v.dataset.id);
+        goodsId.push(v.dataset.id);
     });
-    var goodsId = new Set(obj);
+    // console.log(goodsId);
+
+    //获取商品单价
+    var goodsPrice = [];
+    $('.signprice').each(function(i,v){
+        goodsPrice.push(v.innerText);
+    })
+    // console.log(goodsPrice);
+
+    //获取商品数量
     var goodsNumber = [];
     $('.by-input-num').each(function(i,v){
         goodsNumber.push(v.value);
     })
-    console.log(goodsNumber);
-
+    // console.log(goodsNumber);
+    for(let  i = 0;i < goodsId.length;i++){
+        obj[i] = {};
+        obj[i].id = goodsId[i];
+        obj[i].number = goodsNumber[i];
+        obj[i].price = goodsPrice[i];
+        shopping.push(obj[i]);
+    }
+    console.log(shopping);
     $.ajax({
         type: "GET",
         url: "",
-        data: {
-            'total': $("#by-hj").text(),//总价
-            'id': goodsId,//商品id
-            'goodsNumber':goodsNumber//商品个数
+        data:{
+            "shop":shopping,
+            "totalPrice":$('#by-hj').text(),
         },
         dataType: "json",
         success: function (data) {
-
+            console.log(data);
         }
     });
 
