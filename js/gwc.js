@@ -18,9 +18,11 @@ $("body").on("change", ".mui-input-numbox", function () {
 //按钮减且赋值到价格
 $("body").on("click", ".by-btn-reduce", function () {
     // console.log($(this).next().val());
-    if ($(this).next('.by-input-num').val() <= 1) {
+    if ($(this).next('.by-input-num').val() < 1) {
         $(this).attr('disabled', 'true');
-        // $(this).parents('.mui-card').remove();
+        var remove = window.confirm('确定要删除商品？');
+        if(remove) $(this).parents('.mui-card').remove();
+        
     };
 })
 //全选按钮
