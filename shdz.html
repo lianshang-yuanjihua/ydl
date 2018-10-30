@@ -173,14 +173,14 @@
 			<ul class="mui-table-view mui-table-view-chevron">
 				<li class="mui-table-view-cell mui-media by-shdz-underline" style="position:relative">
 					<span class="mui-icon mui-icon-location mui-pull-left"></span>
-					<a class="mui-navigate-right mui-pull-left" style="margin-left:5px">
+					<span class="mui-navigate-right mui-pull-left" style="margin-left:5px">
 						
-						
+
 						<div class="mui-media-body">
-							收货人 <strong>开发者</strong> 13541872222
+							收货人 <span>开发者</span> <span>13541872222</span>
 							<p class='mui-ellipsis'>收货地址：重庆市渝北区新科国际2栋</p>
 						</div>
-					</a>
+					</span>
 				<img src="images/underline.png"/ style="position:absolute;bottom:0;left:0;">
 				</li>
 				
@@ -203,9 +203,9 @@
 
 					</div>
 				</div>
-				<h5 class="by-gwcjs-jg">￥650元/盒</h5>
+				<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">650</span>元/盒</h5>
 				<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
-					<p class="mui-text-right"><strong style="color:#ff3434;font-size:22px">x12</strong></p>
+					<p class="mui-text-right"><strong style="color:#ff3434;font-size:22px">x<span class="by-goodsnumber">12</span></strong></p>
 					
 				</div>
 			</div>
@@ -222,7 +222,7 @@
 				<li class="mui-table-view-cell mui-media">
 						
 						<div class="mui-media-body by-media-body">
-							合计<strong class="mui-pull-right" style="color:#ff3434">￥123</strong>
+							合计<strong class="mui-pull-right" style="color:#ff3434">￥<span class="by-goodstotal"></span></strong>
 							
 						</div>
 					
@@ -230,7 +230,7 @@
 
 						
 						<div class="mui-media-body by-media-body">
-							商品金额<strong class="mui-pull-right">￥123</strong>
+							商品金额<strong class="mui-pull-right">￥<span class="by-goodsshop"></span></strong>
 							
 						</div>
 				</li>
@@ -238,7 +238,7 @@
 					
 						
 						<div class="mui-media-body by-media-body">
-							运费<strong class="mui-pull-right">￥123</strong>
+							运费<strong class="mui-pull-right">￥<span class="by-goodsadress">12</span></strong>
 							
 						</div>
 				</li>
@@ -247,10 +247,12 @@
 			</div>
 		</div>
 		<div class="by-shdz-tj">
-			<p>合计：<strong style="color:#ff3434;">￥45132</strong><a href="javascript:void(0)" class="mui-pull-right">提交订单</a></p>
+			<p>合计：<strong style="color:#ff3434;">￥<span class="by-totaltj"></span></strong><a href="javascript:void(0)" class="mui-pull-right">提交订单</a></p>
 			
 		</div>
-		<script src="js/util.js"></script>
+		<!-- <script src="js/util.js"></script> -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/shdz.js"></script>
 		<script type="text/javascript">
 			(function() {
 				mui.init({

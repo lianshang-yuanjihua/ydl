@@ -5,7 +5,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>首页</title>
-		<script src="js/mui.min.js"></script>
 		<link rel="stylesheet" href="css/mui.min.css">
 		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
 		<style>
@@ -27,9 +26,11 @@
 				padding: 0;
 				margin: 0;
 			}
-			.mui-content>.mui-table-view:first-child{
-				margin-top:0;
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
 			}
+			
 			.by-card .mui-card-footer:before {
 				height: 0;
 			}
@@ -38,27 +39,50 @@
 				color: #f5ba4c;
 			}
 			
-			.by-tjdz-add .mui-navigate-right:after,.by-tjdz-add .mui-push-right:after{
-				content:'';
+			.by-tjdz-add .mui-navigate-right:after,
+			.by-tjdz-add .mui-push-right:after {
+				content: '';
 			}
-			.by-tjdz-compose{
+			
+			.by-tjdz-compose {
 				position: absolute;
-				top:20px;
-				right:30px;
+				top: 20px;
+				right: 30px;
 			}
-			.by-tjdz-bottom a{
+			
+			.by-tjdz-bottom a {
 				width: 100vw;
-				height:50px;
-				background-color:#F5BA4C;
-				line-height:50px;
-				color:#fff;
+				height: 50px;
+				background-color: #F5BA4C;
+				line-height: 50px;
+				color: #fff;
 				font-weight: bold;
-				position:fixed;
-				bottom:0;
-				text-align:center;
+				position: fixed;
+				bottom: 0;
+				text-align: center;
 				font-size: 18px;
 			}
-		
+			
+			.mui-btn {
+				font-size: 16px;
+				padding: 8px;
+				margin: 3px;
+			}
+			
+			h5.mui-content-padded {
+				margin-left: 3px;
+				margin-top: 20px !important;
+			}
+			
+			h5.mui-content-padded:first-child {
+				margin-top: 12px !important;
+			}
+			
+			.ui-alert {
+				text-align: center;
+				padding: 20px 10px;
+				font-size: 16px;
+			}
 		</style>
 	</head>
 
@@ -77,49 +101,37 @@
 						<label></label>
 						<input name="checkbox" value="Item 2" type="checkbox" checked style="top:9px;">
 					</div>
-					<a class="mui-navigate-right mui-pull-left" >
-						
-					
+
 						<div class="mui-media-body" style="color:#5b5b5b">
 							<p style="color:#686868"><strong>开发者</strong> 13541872222</p>
-							<p class='mui-ellipsis'style="color:#ccc">收货地址：重庆市渝北区新科国际2栋</p>
+							<p class='mui-ellipsis' style="color:#ccc">收货地址：<span id="cityResult3">重庆市渝北区新科国际2栋</span></p>
 							<a class="by-tjdz-compose"><span class="mui-icon mui-icon-compose"></span></a>
 						</div>
-					</a>
 				</li>
-				<li class="mui-table-view-cell mui-media by-tjdz-add">
+				 <li class="mui-table-view-cell mui-media by-tjdz-add">
 					<div class="mui-input-row mui-checkbox mui-pull-left" style="width:50px;height:50px">
 						<label></label>
-						<input name="checkbox" value="Item 2" type="checkbox"  style="top:9px;">
+						<input name="checkbox" value="Item 2" type="checkbox" style="top:9px;">
 					</div>
-					<a class="mui-navigate-right mui-pull-left" >
-						
-					
+
 						<div class="mui-media-body" style="color:#5b5b5b">
 							<p style="color:#686868"><strong>开发者</strong> 13541872222</p>
-							<p class='mui-ellipsis'style="color:#ccc">收货地址：重庆市渝北区新科国际2栋</p>
+							<p class='mui-ellipsis' style="color:#ccc">收货地址：<span class="cityResult3">重庆市渝北区新科国际2栋</span></p>
 							<a class="by-tjdz-compose"><span class="mui-icon mui-icon-compose"></span></a>
 						</div>
-					</a>
-				</li>
+				</li> 
 			</ul>
 			<div class="by-tjdz-bottom">
-				<a href="javascript:void(0)">新增加地址</a>
+				<a href="javascript:void(0)" id='showCityPicker3'>新增加地址</a>
 			</div>
-			
-		<script src="js/util.js"></script>
-		<script type="text/javascript">
-			(function() {
-				mui.init({
-					swipeBack: true //启用右滑关闭功能
-				});
-				var slider = mui("#slider");
-				slider.slider({
-					interval: 2000
-				});
 
-			})();
-		</script>
+			<script src="./js/mui.min.js"></script>
+			<script type="text/javascript">
+				(function($, doc) {
+				$.init();
+			})(mui, document);
+				
+			</script>
 	</body>
 
 </html>

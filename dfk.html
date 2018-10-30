@@ -173,6 +173,31 @@
 				</li>
 				
 			</ul>
+			<div class="mui-card by-card">
+				<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
+					<img src="images/09.png" style="width: 50px;height:80px;" />
+				</div>
+				<div class="by-gwc-fl" style="width: 60%;">
+					<div class="mui-card" style="box-shadow: none;">
+
+						<div class="mui-card-content">
+							<div class="mui-card-content-inner" style="padding:0 5px;">
+								<p>
+									<h4 style="text-align: center;">人参萃取精华丸</h4>
+								</p>
+								<p style="color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">650</span>元/盒</h5>
+				<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
+					<p class="mui-text-right"><strong style="color:#ff3434;font-size:20px">x<span class="by-goodsNumber">1</span></strong></p>
+					
+				</div>
+				
+			</div>
 			<div class="mui-card">
 				<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
 					<img src="images/09.png" style="width: 50px;height:80px;" />
@@ -191,9 +216,34 @@
 
 					</div>
 				</div>
-				<h5 class="by-gwcjs-jg">￥650元/盒</h5>
+				<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">670</span>元/盒</h5>
 				<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
-					<p class="mui-text-right"><strong style="color:#ff3434;font-size:20px">x12</strong></p>
+					<p class="mui-text-right"><strong style="color:#ff3434;font-size:20px">x<span class="by-goodsNumber">2</span></strong></p>
+					
+				</div>
+				
+			</div>
+			<div class="mui-card">
+				<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
+					<img src="images/09.png" style="width: 50px;height:80px;" />
+				</div>
+				<div class="by-gwc-fl" style="width: 60%;">
+					<div class="mui-card by-card" style="box-shadow: none;">
+
+						<div class="mui-card-content">
+							<div class="mui-card-content-inner" style="padding:0 5px;">
+								<p>
+									<h4 style="text-align: center;">人参萃取精华丸</h4>
+								</p>
+								<p style="color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">10</span>元/盒</h5>
+				<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
+					<p class="mui-text-right"><strong style="color:#ff3434;font-size:20px">x<span class="by-goodsNumber">2</span></strong></p>
 					
 				</div>
 				
@@ -206,13 +256,13 @@
 						<a href="">查看全部商品</a>
 					</div>
 					<div class="javascript:void(0)">
-						<p class="mui-text-right" style="color: #9b9b9b;padding:0 10px;margin:0; font-size: 14px;"><strong>合计：</strong><text style="color:#ff3636">￥145415</text></p>
+						<p class="mui-text-right" style="color: #9b9b9b;padding:0 10px;margin:0; font-size: 14px;"><strong>合计：</strong><text style="color:#ff3636">￥<span id="by-hj">666</span></text></p>
 					</div>
 					<div class="">
-						<a href="javascript:void(0)">取消</a><a href="javascript:void(0)">付款</a>
+						<a href="javascript:void(0)">付款</a><a href="javascript:void(0)">取消</a>
 					</div>
 				</div>
-		<script src="js/util.js"></script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			(function() {
 				mui.init({
@@ -221,6 +271,15 @@
 				
 
 			})();
+			function total(){
+				var total = 0;
+				for(let i = 0;i < $('.by-goodsprice').length;i++){
+					console.log($('.by-goodsprice')[i].innerText);
+					total += Number($('.by-goodsprice')[i].innerText*Number($('.by-goodsNumber')[i].innerText))
+				}
+				$('#by-hj').text(total);
+			}
+			total()
 		</script>
 	</body>
 
