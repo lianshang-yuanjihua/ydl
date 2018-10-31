@@ -18,12 +18,14 @@ $("body").on("change", ".mui-input-numbox", function () {
 //按钮减且赋值到价格
 $("body").on("click", ".by-btn-reduce", function () {
     // console.log($(this).next().val());
-    if ($(this).next('.by-input-num').val() < 1) {
+    if ($(this).next('.by-input-num').val() <= 1) {
         $(this).attr('disabled', 'true');
-        var remove = window.confirm('确定要删除商品？');
-        if(remove) $(this).parents('.mui-card').remove();
+        $(this).next('.by-input-num').val(1);
+        // var remove = window.confirm('确定要删除商品？');
+        // if(remove) $(this).parents('.mui-card').remove();
         
     };
+    
 })
 //全选按钮
 function checkAll() {
@@ -72,14 +74,44 @@ function check() {
 }
 
 //商品不存在时
-// function noGoods(){
-//     // console.log($(".signprice").length);
-//     if($(".signprice").length==0){
-//         $('.by-content').addClass("mui-hidden");
-//         $('.by-noGoods').removeClass("mui-hidden");
-//     }
-// }
+function noGoods(){
+    // console.log($(".signprice").length);
+    if($(".signprice").length==0){
+        $('.by-content').addClass("mui-hidden");
+        $('.by-noGoods').removeClass("mui-hidden");
+    }
+}
+//单个种类商品删除
+function removeGoods(){
+    $('.by-remove-goods').click(function(e){
+        e.preventDefault();
+        $(this).parents('.by-card-data').remove();
+        // noGoods();
+        priceAll();
+    })
+}
+//编辑删除商品按钮
+function removeBtn(){
+    $('.by-remove-btn').click(function(){
+        $('.by-check-goods').addClass('mui-hidden');
+        $('.by-remove-goods').removeClass('mui-hidden');
+        $('.by-remove-btn').addClass('mui-hidden').next('.by-remove-succes').removeClass('mui-hidden');
+        
+        removeGoods();
+    })
+}
 
+//删除单个商品完成
+function btnS(){
+    $('.by-remove-succes').click(function(){
+        $('.by-check-goods').removeClass('mui-hidden');
+        $('.by-remove-goods').addClass('mui-hidden');
+        $('.by-remove-btn').removeClass('mui-hidden');
+        $('.by-remove-succes').addClass('mui-hidden');
+    })
+}
+btnS();
+removeBtn();
 checkAll();
 check();
 

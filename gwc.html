@@ -87,7 +87,8 @@
 		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
 		<a class=" mui-icon mui-icon-close mui-pull-left mui-hidden" style="color:#fff"></a>
 		<h1 class="mui-title" style="color:#fff;font-weight: bold;">等待付款</h1>
-		<a class=" mui-icon mui-icon-more mui-pull-right" style="color:#fff"></a>
+		<a class=" mui-icon mui-icon-trash mui-pull-right by-remove-btn" style="color:#fff"></a>
+		<a class=" mui-icon mui-icon-checkmarkempty mui-pull-right by-remove-succes mui-hidden" style="color:#fff"></a>
 	</header>
 	<nav class="mui-bar mui-bar-tab">
 		<a class="mui-tab-item mui-active" href="index.html">
@@ -108,12 +109,15 @@
 		</a>
 	</nav>
 	<div class="mui-content by-content" style="background-color:#fafafa">
-		
-		 <div class="mui-card by-card-data" data-id="5">
+
+		<div class="mui-card by-card-data" data-id="5">
 			<div class="by-gwc-fl" style="height:100px ;margin-top:14vw;margin-left:-10px">
-				<div class="mui-input-row mui-checkbox mui-left">
+				<div class="mui-input-row mui-checkbox mui-left  by-check-goods">
 					<label style="padding-left: 40px;">&nbsp;</label>
 					<input name="checkbox" value="Item 1" type="checkbox" class="by-check by-check0" checked />
+				</div>
+				<div class="mui-input-row mui-checkbox mui-left by-remove-goods mui-hidden">
+					<a class=" mui-icon mui-icon-trash" style="color:red;margin-left:20px;font-size:36px"></a>
 				</div>
 			</div>
 			<div class="by-gwc-fl" style="margin-top:8vw">
@@ -141,89 +145,103 @@
 					</div>
 				</div>
 			</div>
-		</div> 
-		 <div class="mui-card by-card-data" data-id="2">
-			<div class="by-gwc-fl" style="height:100px ;margin-top:14vw;margin-left:-10px">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<label style="padding-left: 40px;">&nbsp;</label>
-					<input name="checkbox" value="Item 1" type="checkbox" class="by-check by-check0" checked />
-				</div>
-			</div>
-			<div class="by-gwc-fl" style="margin-top:8vw">
-				<img src="images/09.png" style="width: 50px;height:80px;" />
-			</div>
-			<div class="by-gwc-fl" style="width:65%;float:right">
-				<div class="mui-card by-card" style="box-shadow: none;">
+		</div>
+		<div class="mui-content by-content" style="background-color:#fafafa">
 
-					<div class="mui-card-content">
-						<div class="mui-card-content-inner" style="padding:0 5px;">
-							<p>
-								<h4 style="text-align: center;">人参萃取精华丸</h4>
-							</p>
-							<p style="font-weight:bold;color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
-						</div>
+			<div class="mui-card by-card-data" data-id="5">
+				<div class="by-gwc-fl" style="height:100px ;margin-top:14vw;margin-left:-10px">
+					<div class="mui-input-row mui-checkbox mui-left  by-check-goods">
+						<label style="padding-left: 40px;">&nbsp;</label>
+						<input name="checkbox" value="Item 1" type="checkbox" class="by-check by-check0" checked />
 					</div>
-					<div class="mui-card-footer">
-						<a class="mui-card-link"><span style="color:#727272"><text style="color:#ff0303" class="price0 signprice">10</text>元/盒</span></a>
-
-						<div class="mui-numbox" style="width:110px;height:25px">
-							<button class="mui-btn mui-btn-numbox-minus by-btn-reduce" type="button">-</button>
-							<input class="mui-input-numbox by-input-num v0" type="number" value="1" />
-							<button class="mui-btn mui-btn-numbox-plus by-btn-add" type="button">+</button>
-						</div>
+					<div class="mui-input-row mui-checkbox mui-left by-remove-goods mui-hidden">
+						<a class=" mui-icon mui-icon-trash" style="color:red;margin-left:20px;font-size:36px"></a>
 					</div>
 				</div>
-			</div>
-		</div> 
-		 <div class="mui-card by-card-data" data-id="1">
-			<div class="by-gwc-fl" style="height:100px ;margin-top:14vw;margin-left:-10px">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<label style="padding-left: 40px;">&nbsp;</label>
-					<input name="checkbox" value="Item 1" type="checkbox" class="by-check by-check0" checked />
+				<div class="by-gwc-fl" style="margin-top:8vw">
+					<img src="images/09.png" style="width: 50px;height:80px;" />
 				</div>
-			</div>
-			<div class="by-gwc-fl" style="margin-top:8vw">
-				<img src="images/09.png" style="width: 50px;height:80px;" />
-			</div>
-			<div class="by-gwc-fl" style="width:65%;float:right">
-				<div class="mui-card by-card" style="box-shadow: none;">
+				<div class="by-gwc-fl" style="width:65%;float:right">
+					<div class="mui-card by-card" style="box-shadow: none;">
 
-					<div class="mui-card-content">
-						<div class="mui-card-content-inner" style="padding:0 5px;">
-							<p>
-								<h4 style="text-align: center;">人参萃取精华丸</h4>
-							</p>
-							<p style="font-weight:bold;color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
+						<div class="mui-card-content">
+							<div class="mui-card-content-inner" style="padding:0 5px;">
+								<p>
+									<h4 style="text-align: center;">人参萃取精华丸</h4>
+								</p>
+								<p style="font-weight:bold;color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
+							</div>
 						</div>
-					</div>
-					<div class="mui-card-footer">
-						<a class="mui-card-link"><span style="color:#727272"><text style="color:#ff0303" class="price0 signprice">50</text>元/盒</span></a>
+						<div class="mui-card-footer">
+							<a class="mui-card-link"><span style="color:#727272"><text style="color:#ff0303" class="price0 signprice">30</text>元/盒</span></a>
 
-						<div class="mui-numbox" style="width:110px;height:25px">
-							<button class="mui-btn mui-btn-numbox-minus by-btn-reduce" type="button">-</button>
-							<input class="mui-input-numbox by-input-num v0" type="number" value="1" />
-							<button class="mui-btn mui-btn-numbox-plus by-btn-add" type="button">+</button>
+							<div class="mui-numbox" style="width:110px;height:25px">
+								<button class="mui-btn mui-btn-numbox-minus by-btn-reduce" type="button">-</button>
+								<input class="mui-input-numbox by-input-num v0" type="number" value="1" />
+								<button class="mui-btn mui-btn-numbox-plus by-btn-add" type="button">+</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div> 
-		
-		
+			<div class="mui-content by-content" style="background-color:#fafafa">
 
-		<div class="by-jz">
-			<div style="width: 40%;float:left">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<label>全选</label>
-					<input name="checkbox" value="Item 2" type="checkbox" checked style="top:9px;" id="by-checkAll">
+				<div class="mui-card by-card-data" data-id="5">
+					<div class="by-gwc-fl" style="height:100px ;margin-top:14vw;margin-left:-10px">
+						<div class="mui-input-row mui-checkbox mui-left  by-check-goods">
+							<label style="padding-left: 40px;">&nbsp;</label>
+							<input name="checkbox" value="Item 1" type="checkbox" class="by-check by-check0" checked />
+						</div>
+						<div class="mui-input-row mui-checkbox mui-left by-remove-goods mui-hidden">
+							<a class=" mui-icon mui-icon-trash" style="color:red;margin-left:20px;font-size:36px"></a>
+						</div>
+					</div>
+					<div class="by-gwc-fl" style="margin-top:8vw">
+						<img src="images/09.png" style="width: 50px;height:80px;" />
+					</div>
+					<div class="by-gwc-fl" style="width:65%;float:right">
+						<div class="mui-card by-card" style="box-shadow: none;">
+
+							<div class="mui-card-content">
+								<div class="mui-card-content-inner" style="padding:0 5px;">
+									<p>
+										<h4 style="text-align: center;">人参萃取精华丸</h4>
+									</p>
+									<p style="font-weight:bold;color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
+								</div>
+							</div>
+							<div class="mui-card-footer">
+								<a class="mui-card-link"><span style="color:#727272"><text style="color:#ff0303" class="price0 signprice">30</text>元/盒</span></a>
+
+								<div class="mui-numbox" style="width:110px;height:25px">
+									<button class="mui-btn mui-btn-numbox-minus by-btn-reduce" type="button">-</button>
+									<input class="mui-input-numbox by-input-num v0" type="number" value="1" />
+									<button class="mui-btn mui-btn-numbox-plus by-btn-add" type="button">+</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="by=jz-rt" style="width: 60%;float:left;color:#a7a7a7">
-				合计：<text style="color:#ff0303" id="by-hj"></text>
-				<a href="javascript:void(0)" class="by-jz-btn">结算</a>
+
+
+
+
+
+				<div class="by-jz">
+					<div style="width: 40%;float:left">
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>全选</label>
+							<input name="checkbox" value="Item 2" type="checkbox" checked style="top:9px;" id="by-checkAll">
+						</div>
+					</div>
+					<div class="by=jz-rt" style="width: 60%;float:left;color:#a7a7a7">
+						合计：<text style="color:#ff0303" id="by-hj"></text>
+						<a href="javascript:void(0)" class="by-jz-btn">结算</a>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</div>		
 	<div class="mui-content mui-text-center mui-hidden by-noGoods" style="height:100%">
 		<div class="by-gwc-ktxt">
 			<h4 style="color:#929292">购物车快饿扁了T.T</h4>
@@ -231,13 +249,12 @@
 			<a href="javascript:void(0)">去逛逛</a>
 		</div>
 	</div>
-	
-	<script src="js/mui.min.js"></script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/gwc.js"></script>
-	<script type="text/javascript">
-		
-	</script>
+			<script src="js/mui.min.js"></script>
+			<script src="js/jquery.min.js"></script>
+			<script src="js/gwc.js"></script>
+			<script type="text/javascript">
+
+			</script>
 </body>
 
 </html>
