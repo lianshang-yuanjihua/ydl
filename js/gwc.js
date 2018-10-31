@@ -47,12 +47,14 @@ function checkAll() {
 function priceAll() {
     total = 0;
     for (var c = 0; c < $(".signprice").length; c++) {
+        console.log($(".signprice").length);
         if ($($('.by-check')[c]).is(':checked')) {
             total += Number($($('.signprice')[c]).text()) * Number($($('.by-input-num')[c]).val())
         }
-        $('#by-hj').text(total);
+        
 
     }
+    $('#by-hj').text(total);
 }
 //单选按钮
 function check() {
