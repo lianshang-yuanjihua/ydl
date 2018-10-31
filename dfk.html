@@ -23,11 +23,7 @@
 				padding-bottom: 51px;
 			}
 			
-			.by-card {
-				width: 100%;
-				padding: 0;
-				margin: 0;
-			}
+			
 			.mui-content>.mui-table-view:first-child{
 				margin-top:0;
 			}
@@ -173,7 +169,7 @@
 				</li>
 				
 			</ul>
-			<div class="mui-card by-card">
+			<div class="mui-card">
 				<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
 					<img src="images/09.png" style="width: 50px;height:80px;" />
 				</div>
@@ -274,7 +270,7 @@
 			function total(){
 				var total = 0;
 				for(let i = 0;i < $('.by-goodsprice').length;i++){
-					console.log($('.by-goodsprice')[i].innerText);
+					// console.log($('.by-goodsprice')[i].innerText);
 					total += Number($('.by-goodsprice')[i].innerText*Number($('.by-goodsNumber')[i].innerText))
 				}
 				$('#by-hj').text(total);
