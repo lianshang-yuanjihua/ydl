@@ -49,7 +49,7 @@ function checkAll() {
 function priceAll() {
     total = 0;
     for (var c = 0; c < $(".signprice").length; c++) {
-        console.log($(".signprice").length);
+        // console.log($(".signprice").length);
         if ($($('.by-check')[c]).is(':checked')) {
             total += Number($($('.signprice')[c]).text()) * Number($($('.by-input-num')[c]).val())
         }
@@ -87,10 +87,9 @@ function noGoods(){
 }
 //单个种类商品删除
 function removeGoods(){
-    $('.by-remove-goods').click(function(e){
-        e.preventDefault();
+    $('.by-remove-goods').click(function(){
         $(this).parents('.by-card-data').remove();
-        // noGoods();
+        noGoods();
         priceAll();
     })
 }
@@ -100,8 +99,6 @@ function removeBtn(){
         $('.by-check-goods').addClass('mui-hidden');
         $('.by-remove-goods').removeClass('mui-hidden');
         $('.by-remove-btn').addClass('mui-hidden').next('.by-remove-succes').removeClass('mui-hidden');
-        
-        removeGoods();
     })
 }
 
@@ -118,7 +115,7 @@ btnS();
 removeBtn();
 checkAll();
 check();
-
+removeGoods();
 //结账提交数据
 $('.by-jz-btn').click(function () {
     //获取商品种类
