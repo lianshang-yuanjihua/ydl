@@ -196,6 +196,29 @@
 				font-weight: bold;
 				color:#9eea6a;
 			}
+			/* 没有商品时 */
+			.by-gwc-ktxt {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+			}
+			
+			.by-gwc-ktxt a {
+				display: block;
+				width: 140px;
+				height: 45px;
+				background-color: #f5ba4c;
+				color: #fff;
+				font-size: 18px;
+				font-weight: bold;
+				line-height: 45px;
+				border-radius: 22.5px;
+				margin-top: 10vw;
+				margin-left: 10px;
+			}
 		</style>
 </head>
 
@@ -205,9 +228,9 @@
 		<h1 class="mui-title" style="color:#fff;font-weight: bold;">
 			待付款
 		</h1>
-		<a class=" mui-icon mui-icon-gear mui-pull-right" style="color:#fff"></a>
+		<a class=" mui-icon mui-icon-more mui-pull-right" style="color:#fff"></a>
 	</header>
-	<div class="mui-content" style="background-color:#fafafa">
+	<div class="mui-content by-content" style="background-color:#fafafa">
 		<ul class="mui-table-view mui-table-view-chevron">
 			<li class="mui-table-view-cell mui-media by-shdz-underline" style="position:relative">
 				<span class="mui-icon mui-icon-location mui-pull-left"></span>
@@ -247,54 +270,8 @@
 
 			</div>
 		</div>
-		<div class="mui-card by-data-goodsid" data-goodsid="3">
-			<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
-				<img src="images/09.png" style="width: 50px;height:80px;" />
-			</div>
-			<div class="by-gwc-fl" style="width: 60%;">
-				<div class="mui-card by-card" style="box-shadow: none;">
-
-					<div class="mui-card-content">
-						<div class="mui-card-content-inner" style="padding:0 5px;">
-							<p>
-								<h4 style="text-align: center;">人参萃取精华丸</h4>
-							</p>
-							<p style="color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">60</span>元/盒</h5>
-			<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
-				<p class="mui-text-right"><strong style="color:#ff3434;font-size:22px">x<span class="by-goodsnumber">1</span></strong></p>
-
-			</div>
-		</div>
-		<div class="mui-card  by-data-goodsid" data-goodsid="2">
-			<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
-				<img src="images/09.png" style="width: 50px;height:80px;" />
-			</div>
-			<div class="by-gwc-fl" style="width: 60%;">
-				<div class="mui-card by-card" style="box-shadow: none;">
-
-					<div class="mui-card-content">
-						<div class="mui-card-content-inner" style="padding:0 5px;">
-							<p>
-								<h4 style="text-align: center;">人参萃取精华丸</h4>
-							</p>
-							<p style="color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">50</span>元/盒</h5>
-			<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
-				<p class="mui-text-right"><strong style="color:#ff3434;font-size:22px">x<span class="by-goodsnumber">1</span></strong></p>
-
-			</div>
-		</div>
+		
+		
 
 		<div class="mui-card">
 			<ul class="mui-table-view mui-table-view-chevron">
@@ -333,23 +310,29 @@
 			<p>合计：<strong style="color:#ff3434;">￥<span class="by-totaltj"></span></strong>
 				<a href="javascript:void(0)" class="mui-pull-right by-total-btn">提交订单</a>
 			</p>
-	
+
 		</div>
-		
+
 	</div>
 	<div class="by-pay-box mui-hidden">
-			<div class="by-pay-item">
-				<div class="by-pay-back">
+		<div class="by-pay-item">
+			<div class="by-pay-back">
 
-				</div>
-				<a href="javascript:void(0)">微信支付</a>
 			</div>
+			<a href="javascript:void(0)">微信支付</a>
 		</div>
-	<!-- <script src="js/util.js"></script> -->
+	</div>
+	<div class="mui-content mui-text-center mui-hidden by-noGoods" style="height:100%">
+		<div class="by-gwc-ktxt">
+			<h4 style="color:#929292">购物车快饿扁了T.T</h4>
+			<h5 style="color:#aeaeae">快给我挑点东西吧</h5>
+			<a href="javascript:void(0)">去逛逛</a>
+		</div>
+	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/shdz.js"></script>
 	<script type="text/javascript">
-		
+
 	</script>
 </body>
 

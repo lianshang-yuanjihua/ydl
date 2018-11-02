@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>首页</title>
-		<script src="js/mui.min.js"></script>
-		<link rel="stylesheet" href="css/mui.min.css">
-		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
-		<style>
-			html,
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>首页</title>
+	<script src="js/mui.min.js"></script>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+	<style>
+		html,
 			body {
 				background-color: #efeff4;
 				height: 100%;
@@ -103,14 +103,6 @@
 			.mui-navigate-right:after, .mui-push-right:after{
 				content:'';
 			}
-		
-			
-			.by-bottom-border div:first-child{
-				width: 100vw;
-				height: 40px;
-				line-height: 40px;
-				text-align: center;
-			}
 			 .by-bottom-border div:nth-child(2) p{
 
 				height:30px;
@@ -140,36 +132,88 @@
 				background-color: #F5BA4C;
 				border:none;
 			}
+			.by-pay-box{
+				width:100%;
+				height:100%;
+				background-color: rgba(143,143,148,.6);
+				position: fixed;
+				bottom: 0;
+				left:0;
+				z-index: 1000;
+				margin-top:-44px;
+			}
+			.by-pay-back{
+				width:100vw;
+				height:100%;
+			}
+			.by-pay-item a{
+				display: block;
+				height:50px;
+				line-height:50px;
+				width: 100vw;
+				position: absolute;
+				bottom:0;
+				background-color:#fff;
+				text-align: center;
+				font-weight: bold;
+				color:#9eea6a;
+			}
+			/* 没有商品时 */
+			.by-gwc-ktxt {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+			}
+			
+			.by-gwc-ktxt a {
+				display: block;
+				width: 140px;
+				height: 45px;
+				background-color: #f5ba4c;
+				color: #fff;
+				font-size: 18px;
+				font-weight: bold;
+				line-height: 45px;
+				border-radius: 22.5px;
+				margin-top: 10vw;
+				margin-left: 10px;
+			}
 		</style>
-	</head>
+</head>
 
-	<body>
-		<header class="mui-bar mui-bar-nav" style="background:#f5ba4c">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
-			<h1 class="mui-title" style="color:#fff;font-weight: bold;">
-				收货地址
-			</h1>
-			<a class=" mui-icon mui-icon-gear mui-pull-right" style="color:#fff"></a>
-		</header>
-		<div class="mui-content" style="background-color:#fafafa">
-			<ul class="mui-table-view mui-table-view-chevron">
+<body>
+	<header class="mui-bar mui-bar-nav" style="background:#f5ba4c">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
+		<h1 class="mui-title" style="color:#fff;font-weight: bold;">
+			收货地址
+		</h1>
+		<a class=" mui-icon mui-icon-more mui-pull-right" style="color:#fff"></a>
+	</header>
+	<div class="mui-content by-content" style="background-color:#fafafa">
+
+		<div class="mui-card by_card_box">
+			<ul class="mui-table-view mui-table-view-chevron" style="border-radius:0;box-shadow:0 1px 1px #f8f8f8">
 				<li class="mui-table-view-cell mui-media by-shdz-underline">
-					
+
 					<div class="mui-navigate-right">
-						
-						
+
+
 						<div class="mui-media-body" style="color:#5b5b5b">
-							 <strong>人生萃取精华丸</strong> 
-							<p class='mui-ellipsis'><span>订单编号：</<stext>454545341345536</stext></p>
-								
+							<strong>人生萃取精华丸</strong>
+							<p class='mui-ellipsis'><span>订单编号：</<stext>454545341345536</stext>
+							</p>
+
 						</div>
 						<a href="javascript:void(0)" id="by-dfk-dfk">等待付款</a>
 					</div>
-					
+
 				</li>
-				
+
 			</ul>
-			<div class="mui-card">
+			<div class="mui-clearfix">
 				<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
 					<img src="images/09.png" style="width: 50px;height:80px;" />
 				</div>
@@ -187,96 +231,58 @@
 
 					</div>
 				</div>
-				<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">650</span>元/盒</h5>
+				<h5 class="by-gwcjs-jg">￥<span class="by_goodsprice">650</span>元/盒</h5>
 				<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
-					<p class="mui-text-right"><strong style="color:#ff3434;font-size:20px">x<span class="by-goodsNumber">1</span></strong></p>
-					
+					<p class="mui-text-right"><strong style="color:#ff3434;font-size:20px">x<span class="by_goodsNumber">2</span></strong></p>
+
 				</div>
-				
 			</div>
-			<div class="mui-card">
-				<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
-					<img src="images/09.png" style="width: 50px;height:80px;" />
-				</div>
-				<div class="by-gwc-fl" style="width: 60%;">
-					<div class="mui-card by-card" style="box-shadow: none;">
-
-						<div class="mui-card-content">
-							<div class="mui-card-content-inner" style="padding:0 5px;">
-								<p>
-									<h4 style="text-align: center;">人参萃取精华丸</h4>
-								</p>
-								<p style="color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">670</span>元/盒</h5>
-				<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
-					<p class="mui-text-right"><strong style="color:#ff3434;font-size:20px">x<span class="by-goodsNumber">2</span></strong></p>
-					
-				</div>
-				
-			</div>
-			<div class="mui-card">
-				<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
-					<img src="images/09.png" style="width: 50px;height:80px;" />
-				</div>
-				<div class="by-gwc-fl" style="width: 60%;">
-					<div class="mui-card by-card" style="box-shadow: none;">
-
-						<div class="mui-card-content">
-							<div class="mui-card-content-inner" style="padding:0 5px;">
-								<p>
-									<h4 style="text-align: center;">人参萃取精华丸</h4>
-								</p>
-								<p style="color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">10</span>元/盒</h5>
-				<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
-					<p class="mui-text-right"><strong style="color:#ff3434;font-size:20px">x<span class="by-goodsNumber">2</span></strong></p>
-					
-				</div>
-				
-			</div>
-			
-			
-		</div>
-		<div class="by-bottom-border mui-card">
+			<div>
+				<div class="by-bottom-border">
 					<div class=" ">
-						<a href="">查看全部商品</a>
 					</div>
 					<div class="javascript:void(0)">
-						<p class="mui-text-right" style="color: #9b9b9b;padding:0 10px;margin:0; font-size: 14px;"><strong>合计：</strong><text style="color:#ff3636">￥<span id="by-hj">666</span></text></p>
+						<p class="mui-text-right" style="color: #9b9b9b;padding:0 10px;margin:0; font-size: 14px;"><strong>合计：</strong>
+							<text style="color:#ff3636">￥<span class="by_goodstotal">666</span></text>
+						</p>
 					</div>
 					<div class="">
-						<a href="javascript:void(0)">付款</a><a href="javascript:void(0)">取消</a>
+						<a href="javascript:void(0)" class="by_total_btn_ok">付款</a><a href="javascript:void(0)" class="by_total_btn_cancel">取消</a>
 					</div>
 				</div>
-		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			(function() {
-				mui.init({
-					swipeBack: true //启用右滑关闭功能
-				});
-				
+			</div>
 
-			})();
-			function total(){
-				var total = 0;
-				for(let i = 0;i < $('.by-goodsprice').length;i++){
-					// console.log($('.by-goodsprice')[i].innerText);
-					total += Number($('.by-goodsprice')[i].innerText*Number($('.by-goodsNumber')[i].innerText))
-				}
-				$('#by-hj').text(total);
-			}
-			total()
-		</script>
-	</body>
+		</div>
+		<div class="by-pay-box mui-hidden">
+			<div class="by-pay-item">
+				<div class="by-pay-back">
+
+				</div>
+				<a href="javascript:void(0)">微信支付</a>
+			</div>
+		</div>
+
+	</div>
+	<div class="mui-content mui-text-center mui-hidden by-noGoods" style="height:100%">
+		<div class="by-gwc-ktxt">
+			<h4 style="color:#929292">购物车快饿扁了T.T</h4>
+			<h5 style="color:#aeaeae">快给我挑点东西吧</h5>
+			<a href="javascript:void(0)">去逛逛</a>
+		</div>
+	</div>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/dfk.js"></script>
+	<script type="text/javascript">
+		(function () {
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+
+
+		})();
+
+		
+	</script>
+</body>
 
 </html>

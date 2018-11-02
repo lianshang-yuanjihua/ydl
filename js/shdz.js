@@ -27,10 +27,10 @@ $('.by-total-btn').click(function () {
 function openPay(){
     $('.by-pay-box').removeClass('mui-hidden');
     // console.log($('body').innerHeight());
-    $('.by-pay-box').css('height',$('body').innerHeight()-44);
+    $('.by-pay-box').css('height',$('body').innerHeight());
     $('.by-pay-back').css('height',$('.by-pay-box').height()-50);
-    console.log($('.by-pay-back').height());
-    closePay();
+    // console.log($('.by-pay-back').height());
+  
 }
 //点击关闭支付弹窗
 function closePay(){
@@ -38,7 +38,7 @@ function closePay(){
         $('.by-pay-box').addClass('mui-hidden');
     })
 }
-
+closePay();
 //提交商品参数
 
 function upload(){
@@ -102,3 +102,15 @@ function priceAll() {
     console.log(total);
 }
 priceAll()
+
+//当页面没有商品时
+function noGoods(){
+    // console.log($(".signprice").length);
+    if($(".by-goodsnumber").length==0){
+        $('.by-content').addClass("mui-hidden");
+        $('.by-noGoods').removeClass("mui-hidden");
+    }
+}
+$(function(){
+    noGoods();
+})
