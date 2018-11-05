@@ -162,11 +162,11 @@
 					var code = document.getElementById('by-code');
 					var showCityPicker3 = document.getElementById('showCityPicker3');
 					var bytextarea = document.getElementById('textarea');
-					if(name.value==""||phone.value==""||code.value==""||showCityPicker3.value==""|| bytextarea.value==""){
+					if(name.value==""||phone.value==""||code.value==""||showCityPicker3.value==""){
 						mui.toast('<span style="color:red">输入不能为空...</span>');
 						return false;
 					}else{
-						document.getElementById('form').onsubmit();
+						document.getElementById('form').submit();
 					}
 					
 			     };

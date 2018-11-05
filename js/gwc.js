@@ -6,16 +6,13 @@
     slider.slider({
         interval: 2000
     });
-
 })();
 $(function () {
     $("#by-hj").text(priceAll());
 })
 $("body").on("change", ".mui-input-numbox", function () {
-
     priceAll();
 })
-
 //按钮减且赋值到价格
 $("body").on("click", ".by-btn-reduce", function () {
     // console.log($(this).next().val());
@@ -25,12 +22,10 @@ $("body").on("click", ".by-btn-reduce", function () {
         priceAll();
         // var remove = window.confirm('确定要删除商品？');
         // if(remove) $(this).parents('.mui-card').remove();
-        
     };
-    
 })
 //全选按钮
-function checkAll() {
+function checkAll(){
     $('#by-checkAll').change(function () {
         //      console.log($(this)[0].checked);
         if (!$(this)[0].checked) {
@@ -51,10 +46,12 @@ function priceAll() {
     for (var c = 0; c < $(".signprice").length; c++) {
         // console.log($(".signprice").length);
         if ($($('.by-check')[c]).is(':checked')) {
-            total += Number($($('.signprice')[c]).text()) * Number($($('.by-input-num')[c]).val())
+            if (Number($($('.by-input-num')[c]).val() >= 10)) {
+                total += (parseInt($($('.by-input-num')[c]).val()/10) *300)*0.8 + Number($($('.by-input-num')[c]).val()) % 10 * Number($($('.signprice')[c]).text());
+            } else {
+                total += Number($($('.signprice')[c]).text()) * Number($($('.by-input-num')[c]).val())
+            }
         }
-        
-
     }
     $('#by-hj').text(total);
 }
@@ -71,31 +68,28 @@ function check() {
         } else {
             $('#by-checkAll')[0].checked = false;
         };
-
-
-
     })
 }
 
 //商品不存在时
-function noGoods(){
+function noGoods() {
     // console.log($(".signprice").length);
-    if($(".signprice").length==0){
+    if ($(".signprice").length == 0) {
         $('.by-content').addClass("mui-hidden");
         $('.by-noGoods').removeClass("mui-hidden");
     }
 }
 //单个种类商品删除
-function removeGoods(){
-    $('.by-remove-goods').click(function(){
+function removeGoods() {
+    $('.by-remove-goods').click(function () {
         $(this).parents('.by-card-data').remove();
         noGoods();
         priceAll();
     })
 }
 //编辑删除商品按钮
-function removeBtn(){
-    $('.by-remove-btn').click(function(){
+function removeBtn() {
+    $('.by-remove-btn').click(function () {
         $('.by-check-goods').addClass('mui-hidden');
         $('.by-remove-goods').removeClass('mui-hidden');
         $('.by-remove-btn').addClass('mui-hidden').next('.by-remove-succes').removeClass('mui-hidden');
@@ -103,8 +97,8 @@ function removeBtn(){
 }
 
 //删除单个商品完成
-function btnS(){
-    $('.by-remove-succes').click(function(){
+function btnS() {
+    $('.by-remove-succes').click(function () {
         $('.by-check-goods').removeClass('mui-hidden');
         $('.by-remove-goods').addClass('mui-hidden');
         $('.by-remove-btn').removeClass('mui-hidden');
@@ -123,7 +117,7 @@ $('.by-jz-btn').click(function () {
     var obj = []; //每个商品的种类
 
     //获取商品种类id
-    var goodsId = []; 
+    var goodsId = [];
     $('.by-card-data').each(function (i, v) {
         goodsId.push(v.dataset.id);
     });
@@ -131,18 +125,18 @@ $('.by-jz-btn').click(function () {
 
     //获取商品单价
     var goodsPrice = [];
-    $('.signprice').each(function(i,v){
+    $('.signprice').each(function (i, v) {
         goodsPrice.push(v.innerText);
     })
     // console.log(goodsPrice);
 
     //获取商品数量
     var goodsNumber = [];
-    $('.by-input-num').each(function(i,v){
+    $('.by-input-num').each(function (i, v) {
         goodsNumber.push(v.value);
     })
     // console.log(goodsNumber);
-    for(let  i = 0;i < goodsId.length;i++){
+    for (let i = 0; i < goodsId.length; i++) {
         obj[i] = {};
         obj[i].id = goodsId[i];
         obj[i].number = goodsNumber[i];
@@ -153,9 +147,9 @@ $('.by-jz-btn').click(function () {
     $.ajax({
         type: "GET",
         url: "",
-        data:{
-            "shop":shopping,
-            "totalPrice":$('#by-hj').text(),
+        data: {
+            "shop": shopping,
+            "totalPrice": $('#by-hj').text(),
         },
         dataType: "json",
         success: function (data) {
