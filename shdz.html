@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-	<title>首页</title>
-	<script src="js/mui.min.js"></script>
-	<link rel="stylesheet" href="css/mui.min.css">
-	<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
-	<style>
-		html,
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<style>
+			html,
 			body {
 				background-color: #efeff4;
 				height: 100%;
@@ -140,11 +140,11 @@
 			.mui-push-right:after {
 				font-size: 26px;
 			}
-			.by-shdz-underline{
+			
+			.by-shdz-underline {
 				width: 100%;
-				height:2px;
+				height: 2px;
 				background: url('images/underline.png') 0 0 repeat-x;
-				
 			}
 			
 			.by-media-body {
@@ -159,7 +159,7 @@
 				bottom: 0;
 				box-shadow: -2px 0px 2px #ccc;
 				padding: 0 50px;
-				background-color:#fff;
+				background-color: #fff;
 			}
 			
 			.by-shdz-tj a {
@@ -173,33 +173,37 @@
 				margin-top: 5px;
 				text-align: center;
 			}
-			.by-pay-box{
-				width:100%;
-				height:100%;
-				background-color: rgba(143,143,148,.6);
+			
+			.by-pay-box {
+				width: 100%;
+				height: 100%;
+				background-color: rgba(143, 143, 148, .6);
 				position: fixed;
 				bottom: 0;
-				left:0;
+				left: 0;
 				z-index: 1000;
-				margin-top:-44px;
+				margin-top: -44px;
 			}
-			.by-pay-back{
-				width:100vw;
-				height:100%;
+			
+			.by-pay-back {
+				width: 100vw;
+				height: 100%;
 			}
-			.by-pay-item a{
+			
+			.by-pay-item a {
 				display: block;
-				height:50px;
-				line-height:50px;
+				height: 50px;
+				line-height: 50px;
 				width: 100vw;
 				position: absolute;
-				bottom:0;
-				background-color:#fff;
+				bottom: 0;
+				background-color: #fff;
 				text-align: center;
 				font-weight: bold;
-				color:#9eea6a;
+				color: #9eea6a;
 			}
 			/* 没有商品时 */
+			
 			.by-gwc-ktxt {
 				position: absolute;
 				top: 50%;
@@ -222,32 +226,36 @@
 				margin-top: 10vw;
 				margin-left: 10px;
 			}
+			
+			.mui-checkbox input[type=checkbox]:checked:before {
+				color: #F5BA4C
+			}
 		</style>
-</head>
+	</head>
 
-<body>
-	<header class="mui-bar mui-bar-nav" style="background:#f5ba4c">
-		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
-		<h1 class="mui-title" style="color:#fff;font-weight: bold;">
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background:#f5ba4c">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#fff"></a>
+			<h1 class="mui-title" style="color:#fff;font-weight: bold;">
 			待付款
 		</h1>
-		<a class=" mui-icon mui-icon-more mui-pull-right" style="color:#fff"></a>
-	</header>
-	<div class="mui-content by-content" style="background-color:#fafafa">
-		<ul class="mui-table-view mui-table-view-chevron">
-			<li class="mui-table-view-cell mui-media " >
-				<span class="mui-icon mui-icon-location mui-pull-left"></span>
-				<span class="mui-navigate-right mui-pull-left" style="margin-left:5px">
+			<a class=" mui-icon mui-icon-more mui-pull-right" style="color:#fff"></a>
+		</header>
+		<div class="mui-content by-content" style="background-color:#fafafa">
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media ">
+					<span class="mui-icon mui-icon-location mui-pull-left"></span>
+					<span class="mui-navigate-right mui-pull-left" style="margin-left:5px">
 
 
 					<div class="mui-media-body">
 						收货人 <span class="by-Customer">开发者</span> <span class="by-Customer-phone">13541872222</span>
-						<p class='mui-ellipsis'>收货地址：<span class="by-goods-address" data-addressId="xxbhh">重庆市渝北区新科国际2栋</span></p>
-					</div>
-				</span>
-				
-			</li>
-			<div class="by-shdz-underline"></div>
+					<p class='mui-ellipsis'>收货地址：<span class="by-goods-address" data-addressId="xxbhh">重庆市渝北区新科国际2栋</span></p>
+		</div>
+		</span>
+
+		</li>
+		<div class="by-shdz-underline"></div>
 		</ul>
 		<div class="mui-card by-data-goodsid" data-goodsid="1">
 			<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
@@ -273,8 +281,6 @@
 
 			</div>
 		</div>
-		
-		
 
 		<div class="mui-card">
 			<ul class="mui-table-view mui-table-view-chevron">
@@ -284,14 +290,17 @@
 						配送方式
 						<h5 class="mui-pull-right">免运费普通快递</h5>
 					</div>
-
-				<li class="mui-table-view-cell mui-media">
+				</li>
+				<li class="mui-table-view-cell mui-media" style="padding:5px 15px ;">
 
 					<div class="mui-media-body by-media-body">
-						合计<strong class="mui-pull-right" style="color:#ff3434">￥<span class="by-goodstotal"></span></strong>
+						<div class="mui-input-row mui-checkbox">
+							<label style="padding: 11px 0px;">优惠券</label>
+							<input name="checkbox1" value="Item 4" type="checkbox" style="right: 0px;" checked>
+						</div>
 
 					</div>
-
+				</li>
 				<li class="mui-table-view-cell mui-media">
 
 					<div class="mui-media-body by-media-body">
@@ -316,27 +325,26 @@
 
 		</div>
 
-	</div>
-	<div class="by-pay-box mui-hidden">
-		<div class="by-pay-item">
-			<div class="by-pay-back">
+		</div>
+		<div class="by-pay-box mui-hidden">
+			<div class="by-pay-item">
+				<div class="by-pay-back">
 
+				</div>
+				<a href="javascript:void(0)">微信支付</a>
 			</div>
-			<a href="javascript:void(0)">微信支付</a>
 		</div>
-	</div>
-	<div class="mui-content mui-text-center mui-hidden by-noGoods" style="height:100%">
-		<div class="by-gwc-ktxt">
-			<h4 style="color:#929292">购物车快饿扁了T.T</h4>
-			<h5 style="color:#aeaeae">快给我挑点东西吧</h5>
-			<a href="javascript:void(0)">去逛逛</a>
+		<div class="mui-content mui-text-center mui-hidden by-noGoods" style="height:100%">
+			<div class="by-gwc-ktxt">
+				<h4 style="color:#929292">购物车快饿扁了T.T</h4>
+				<h5 style="color:#aeaeae">快给我挑点东西吧</h5>
+				<a href="javascript:void(0)">去逛逛</a>
+			</div>
 		</div>
-	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/shdz.js"></script>
-	<script type="text/javascript">
-
-	</script>
-</body>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/shdz.js"></script>
+		<script type="text/javascript">
+		</script>
+	</body>
 
 </html>
