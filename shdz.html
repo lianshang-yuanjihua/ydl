@@ -174,7 +174,7 @@
 				text-align: center;
 			}
 			
-			.by-pay-box {
+			.by-pay-box,.by_popAddress_show {
 				width: 100%;
 				height: 100%;
 				background-color: rgba(143, 143, 148, .6);
@@ -230,6 +230,22 @@
 			.mui-checkbox input[type=checkbox]:checked:before {
 				color: #F5BA4C
 			}
+			.by_ul_adrress{
+				margin: 0;
+				padding:0;
+				list-style: none;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				background-color: #fff;
+			}
+			.by_ul_adrress li{
+				height:40px;
+				width: 100%;
+				line-height:40px;
+				text-align: center;
+				font-size: 18px;
+			}
 		</style>
 	</head>
 
@@ -244,86 +260,89 @@
 		<div class="mui-content by-content" style="background-color:#fafafa">
 			<ul class="mui-table-view mui-table-view-chevron">
 				<li class="mui-table-view-cell mui-media ">
-					<span class="mui-icon mui-icon-location mui-pull-left"></span>
-					<span class="mui-navigate-right mui-pull-left" style="margin-left:5px">
+					<span class="mui-icon mui-icon-plusempty mui-pull-left"></span>
+					<span class="mui-navigate-right mui-pull-left" style="margin-left:5px"></span>
 
-
-					<div class="mui-media-body">
-						收货人 <span class="by-Customer">开发者</span> <span class="by-Customer-phone">13541872222</span>
-					<p class='mui-ellipsis'>收货地址：<span class="by-goods-address" data-addressId="xxbhh">重庆市渝北区新科国际2栋</span></p>
-		</div>
-		</span>
-
-		</li>
-		<div class="by-shdz-underline"></div>
-		</ul>
-		<div class="mui-card by-data-goodsid" data-goodsid="1">
-			<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
-				<img src="images/09.png" style="width: 50px;height:80px;" />
-			</div>
-			<div class="by-gwc-fl" style="width: 60%;">
-				<div class="mui-card by-card" style="box-shadow: none;">
-
-					<div class="mui-card-content">
-						<div class="mui-card-content-inner" style="padding:0 5px;">
-							<p>
-								<h4 style="text-align: center;">人参萃取精华丸</h4>
-							</p>
-							<p style="color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
+					<div class="mui-media-body by_popAddress_box">
+						<!--<div class="mui-hidden">
+							收货人 <span class="by-Customer">开发者</span> <span class="by-Customer-phone">13541872222</span>
+							<p class='mui-ellipsis'>收货地址：<span class="by-goods-address" data-addressId="xxbhh">重庆市渝北区新科国际2栋</span></p>
+						</div>-->
+						<div class="" style="padding-left:20px;color:#cf3a3a;">
+							<h4>你还未添加地址</h4>
 						</div>
 					</div>
+
+				</li>
+				<div class="by-shdz-underline"></div>
+			</ul>
+			<div class="mui-card by-data-goodsid" data-goodsid="1">
+				<div class="by-gwc-fl" style="margin-top:4vw;margin-left:1vw;">
+					<img src="images/09.png" style="width: 50px;height:80px;" />
+				</div>
+				<div class="by-gwc-fl" style="width: 60%;">
+					<div class="mui-card by-card" style="box-shadow: none;">
+
+						<div class="mui-card-content">
+							<div class="mui-card-content-inner" style="padding:0 5px;">
+								<p>
+									<h4 style="text-align: center;">人参萃取精华丸</h4>
+								</p>
+								<p style="color: #9b9b9b;padding:0 10px; font-size: 12px;">详情：人参萃取精华丸，中成药名，药食同源，连续服用...</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">650</span>元/盒</h5>
+				<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
+					<p class="mui-text-right"><strong style="color:#ff3434;font-size:22px">x<span class="by-goodsnumber">10</span></strong></p>
 
 				</div>
 			</div>
-			<h5 class="by-gwcjs-jg">￥<span class="by-goodsprice">650</span>元/盒</h5>
-			<div class="by-dsh-b mui-pull-left" style="padding-right: 20px;">
-				<p class="mui-text-right"><strong style="color:#ff3434;font-size:22px">x<span class="by-goodsnumber">10</span></strong></p>
+
+			<div class="mui-card">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-media">
+
+						<div class="mui-media-body by-media-body">
+							配送方式
+							<h5 class="mui-pull-right">免运费普通快递</h5>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media" style="padding:5px 15px ;">
+
+						<div class="mui-media-body by-media-body">
+							<div class="mui-input-row mui-checkbox">
+								<label style="padding: 11px 0px;">优惠券</label>
+								<input name="checkbox1" value="Item 4" type="checkbox" style="right: 0px;" checked>
+							</div>
+
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+
+						<div class="mui-media-body by-media-body">
+							商品金额<strong class="mui-pull-right">￥<span class="by-goodsshop"></span></strong>
+
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+
+						<div class="mui-media-body by-media-body">
+							运费<strong class="mui-pull-right">￥<span class="by-goodsadress">0</span></strong>
+
+						</div>
+					</li>
+
+				</ul>
+			</div>
+			<div class="by-shdz-tj">
+				<p>合计：<strong style="color:#ff3434;">￥<span class="by-totaltj"></span></strong>
+					<a href="javascript:void(0)" class="mui-pull-right by-total-btn">提交订单</a>
+				</p>
 
 			</div>
-		</div>
-
-		<div class="mui-card">
-			<ul class="mui-table-view mui-table-view-chevron">
-				<li class="mui-table-view-cell mui-media">
-
-					<div class="mui-media-body by-media-body">
-						配送方式
-						<h5 class="mui-pull-right">免运费普通快递</h5>
-					</div>
-				</li>
-				<li class="mui-table-view-cell mui-media" style="padding:5px 15px ;">
-
-					<div class="mui-media-body by-media-body">
-						<div class="mui-input-row mui-checkbox">
-							<label style="padding: 11px 0px;">优惠券</label>
-							<input name="checkbox1" value="Item 4" type="checkbox" style="right: 0px;" checked>
-						</div>
-
-					</div>
-				</li>
-				<li class="mui-table-view-cell mui-media">
-
-					<div class="mui-media-body by-media-body">
-						商品金额<strong class="mui-pull-right">￥<span class="by-goodsshop"></span></strong>
-
-					</div>
-				</li>
-				<li class="mui-table-view-cell mui-media">
-
-					<div class="mui-media-body by-media-body">
-						运费<strong class="mui-pull-right">￥<span class="by-goodsadress">0</span></strong>
-
-					</div>
-				</li>
-
-			</ul>
-		</div>
-		<div class="by-shdz-tj">
-			<p>合计：<strong style="color:#ff3434;">￥<span class="by-totaltj"></span></strong>
-				<a href="javascript:void(0)" class="mui-pull-right by-total-btn">提交订单</a>
-			</p>
-
-		</div>
 
 		</div>
 		<div class="by-pay-box mui-hidden">
@@ -332,6 +351,18 @@
 
 				</div>
 				<a href="javascript:void(0)">微信支付</a>
+			</div>
+		</div>
+		<div class="by_popAddress_show mui-hidden">
+			<div class="by-pay-item">
+				<div class="by-pay-back">
+					
+				</div>
+				<ul class="by_ul_adrress">
+					<li>重庆市渝北区汽博中心</li>
+					<li>重庆市渝北区汽博中心</li>
+					<li>重庆市渝北区汽博中心</li>
+				</ul>
 			</div>
 		</div>
 		<div class="mui-content mui-text-center mui-hidden by-noGoods" style="height:100%">

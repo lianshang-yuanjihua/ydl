@@ -32,6 +32,8 @@ function openPay(){
     // console.log($('.by-pay-back').height());
   
 }
+
+
 //点击关闭支付弹窗
 function closePay(){
     $('.by-pay-back').click(function(){
@@ -86,7 +88,7 @@ function upload(){
         }
     });
 }
-upload();
+//upload();
 
 //价格总和
 function priceAll() {
@@ -101,8 +103,31 @@ function priceAll() {
     $('.by-goodstotal').text(total);
     console.log(total);
 }
-priceAll()
+priceAll();
 
+
+////地址选择
+function popAddress(){
+	$('.by_popAddress_box').click(function(){
+		$('.by_popAddress_show').removeClass('mui-hidden');
+		clickAddres();
+	})
+}
+popAddress();
+//点击弹出地址窗口
+function clickAddres(){
+    $('.by_popAddress_show').removeClass('mui-hidden');
+    // console.log($('body').innerHeight());
+    $('.by_popAddress_show').css('height',$('body').innerHeight());
+    $('.by-pay-back').css('height',$('.by_popAddress_show').height()-$('.by_ul_adrress').height());
+    // console.log($('.by-pay-back').height());
+
+}
+
+$('.by_popAddress_show .by-pay-back').click(function(){
+	clickAddres();
+	$('.by_popAddress_show').addClass('mui-hidden');
+})
 //当页面没有商品时
 function noGoods(){
     // console.log($(".signprice").length);
